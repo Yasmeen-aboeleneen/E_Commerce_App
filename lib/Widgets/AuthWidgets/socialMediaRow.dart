@@ -21,7 +21,7 @@ class SocialmediaRow extends StatelessWidget {
           decoration: BoxDecoration(
               border: Border.all(color: kPrimary, width: 2),
               borderRadius: const BorderRadius.all(Radius.circular(25))),
-          width: w * .4,
+          width: w * .36,
           height: h * .06,
           child: GestureDetector(
             onTap: () {},
@@ -34,9 +34,7 @@ class SocialmediaRow extends StatelessWidget {
                   image,
                   fit: BoxFit.cover,
                   height: h * .03,
-                )
-                
-                ),
+                )),
                 SizedBox(
                   width: w * .01,
                 ),

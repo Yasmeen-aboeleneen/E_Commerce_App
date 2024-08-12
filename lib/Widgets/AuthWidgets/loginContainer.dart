@@ -1,8 +1,11 @@
 import 'package:ecommerce/Core/Constants/colors.dart';
+import 'package:ecommerce/Core/Constants/fonts.dart';
 import 'package:ecommerce/Core/Constants/images.dart';
+import 'package:ecommerce/Core/Utils/Buttons.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/customPassTextField.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/customRow.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/customTextField.dart';
+import 'package:ecommerce/Widgets/AuthWidgets/dividers.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/socialMediaRow.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +18,9 @@ class Logincontainer extends StatelessWidget {
     var w = MediaQuery.of(context).size.width;
     return Center(
       child: Container(
+        margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 10),
-        height: h * .6,
+        height: h * .62,
         width: w,
         decoration: const BoxDecoration(
             color: kveryWhite,
@@ -40,6 +44,18 @@ class Logincontainer extends StatelessWidget {
               height: h * .001,
             ),
             const CustomRow(),
+            SizedBox(
+              height: h * .001,
+            ),
+            CustomButton(
+                onPressed: () {},
+                title: "Login",
+                color: kPrimary,
+                style: Fonts.splashButtonText),
+            SizedBox(
+              height: h * .01,
+            ),
+            const Dividers(),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
