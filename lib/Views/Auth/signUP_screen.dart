@@ -1,3 +1,5 @@
+import 'package:ecommerce/Core/Constants/colors.dart';
+import 'package:ecommerce/Widgets/AuthWidgets/signUp_container.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -5,6 +7,20 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    var h = MediaQuery.of(context).size.height;
+    var w = MediaQuery.of(context).size.width;
+    return Scaffold(
+      resizeToAvoidBottomInset: true,
+      body: Stack(
+        children: [
+          Container(
+            height: h,
+            width: w,
+            color: kPrimary,
+            child: SignupContainer(),
+          ),
+        ],
+      ),
+    );
   }
 }

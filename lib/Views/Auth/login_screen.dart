@@ -10,16 +10,13 @@ class LoginScreen extends StatelessWidget {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: kPrimary,
       resizeToAvoidBottomInset: true,
-      body: Stack(
-        children: [
-          Container(
-            height: h,
-            width: w,
-            color: kPrimary,
-          ),
-          const Logincontainer()
-        ],
+      body: Container(
+        height: h,
+        width: w,
+        color: kPrimary,
+        child: const Logincontainer(),
       ),
     );
   }

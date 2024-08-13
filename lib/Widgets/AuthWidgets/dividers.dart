@@ -1,30 +1,31 @@
-import 'package:ecommerce/Core/Constants/colors.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-class Dividers extends StatelessWidget {
-  const Dividers({super.key});
+import 'package:ecommerce/Core/Constants/colors.dart';
+import 'package:ecommerce/Core/Constants/fonts.dart';
 
+class Dividers extends StatelessWidget {
+  const Dividers({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
+  final String text;
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 5, left: 15, right: 15),
+    return Padding(
+      padding: const EdgeInsets.only(top: 5, left: 15, right: 15),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             child: Divider(
               color: kPrimary,
               thickness: 3,
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              'Or login with',
-              style: TextStyle(
-                  fontSize: 15, fontWeight: FontWeight.bold, color: kGrey),
-            ),
-          ),
-          Expanded(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(text, style: Fonts.loginWithText)),
+          const Expanded(
             child: Divider(
               color: kPrimary,
               thickness: 3,

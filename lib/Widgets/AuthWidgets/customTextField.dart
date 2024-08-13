@@ -1,15 +1,16 @@
 import 'package:ecommerce/Core/Constants/colors.dart';
+import 'package:ecommerce/Core/Constants/fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Customtextfield extends StatelessWidget {
-  const Customtextfield(
-      {super.key,
-      this.keyboardType,
-      required this.hintText,
-      required this.labelText,
-      required this.iconData,
-      });
+  const Customtextfield({
+    super.key,
+    this.keyboardType,
+    required this.hintText,
+    required this.labelText,
+    required this.iconData,
+  });
   final TextInputType? keyboardType;
   final String hintText;
   final String labelText;
@@ -30,11 +31,7 @@ class Customtextfield extends StatelessWidget {
           borderRadius: BorderRadius.circular(25),
         ),
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        label: Text(
-          labelText,
-          style: GoogleFonts.notoSansOlChiki(
-              fontWeight: FontWeight.bold, fontSize: w * .05, color: kGrey),
-        ),
+        label: Text(labelText, style: Fonts.customTextFieldText),
         suffixIcon: Icon(
           iconData,
           color: kGrey,

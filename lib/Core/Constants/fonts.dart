@@ -13,4 +13,12 @@ class Fonts {
       color: kveryWhite, fontWeight: FontWeight.bold, fontSize: 17);
   static TextStyle onBoardingText = GoogleFonts.adamina(
       color: kPrimary, fontWeight: FontWeight.bold, fontSize: 15);
+
+  static TextStyle socialButtonsText = GoogleFonts.notoSansOlChiki(
+      fontWeight: FontWeight.w500, fontSize: 14, color: kGrey);
+  static TextStyle loginWithText =
+      const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: kGrey);
+
+  static TextStyle customTextFieldText = GoogleFonts.notoSansOlChiki(
+      fontWeight: FontWeight.bold, fontSize: 15, color: kGrey);
 }
