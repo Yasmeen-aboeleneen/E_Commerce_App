@@ -3,6 +3,7 @@ import 'package:ecommerce/Core/Constants/fonts.dart';
 import 'package:ecommerce/Core/Constants/images.dart';
 import 'package:ecommerce/Core/Utils/Buttons.dart';
 import 'package:ecommerce/Views/Auth/login_screen.dart';
+import 'package:ecommerce/Views/Auth/successSignUP_screen.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/customPassTextField.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/customTextField.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/dividers.dart';
@@ -65,7 +66,9 @@ class SignupContainer extends StatelessWidget {
                   height: h * .03,
                 ),
                 CustomButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const SuccessSignupScreen());
+                    },
                     title: "Sign Up",
                     color: kPrimary,
                     style: Fonts.splashButtonText),

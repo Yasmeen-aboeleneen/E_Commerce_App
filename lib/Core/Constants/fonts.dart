@@ -13,7 +13,7 @@ class Fonts {
       color: kveryWhite, fontWeight: FontWeight.bold, fontSize: 17);
   static TextStyle onBoardingText = GoogleFonts.adamina(
       color: kPrimary, fontWeight: FontWeight.bold, fontSize: 15);
-      static TextStyle title = GoogleFonts.adamina(
+  static TextStyle title = GoogleFonts.adamina(
       color: kPrimary, fontWeight: FontWeight.bold, fontSize: 18);
 
   static TextStyle socialButtonsText = GoogleFonts.notoSansOlChiki(
@@ -23,7 +23,6 @@ class Fonts {
 
   static TextStyle customTextFieldText = GoogleFonts.notoSansOlChiki(
       fontWeight: FontWeight.bold, fontSize: 15, color: kGrey);
-      static TextStyle customText = GoogleFonts.notoSansOlChiki(
+  static TextStyle customText = GoogleFonts.notoSansOlChiki(
       fontWeight: FontWeight.bold, fontSize: 16, color: kGrey);
-
 }
