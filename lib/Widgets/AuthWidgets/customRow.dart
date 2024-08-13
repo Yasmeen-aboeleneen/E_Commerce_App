@@ -1,4 +1,6 @@
+import 'package:ecommerce/Views/Auth/forgot_Password_Screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../Core/Constants/colors.dart';
@@ -45,7 +47,7 @@ class _CustomRawState extends State<CustomRow> {
 
         GestureDetector(
             onTap: () {
-              // controller.goToForgotPasswordScreen();
+              Get.to(() => const ForgotPasswordScreen());
             },
             child: Text(
               "Forgot Password ?",
