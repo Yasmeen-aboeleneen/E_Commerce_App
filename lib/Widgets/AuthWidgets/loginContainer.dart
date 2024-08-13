@@ -3,6 +3,7 @@ import 'package:ecommerce/Core/Constants/fonts.dart';
 import 'package:ecommerce/Core/Constants/images.dart';
 import 'package:ecommerce/Core/Utils/Buttons.dart';
 import 'package:ecommerce/Views/Auth/signUP_screen.dart';
+import 'package:ecommerce/Views/Splash/welcome_Splash_Screen.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/customPassTextField.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/customRow.dart';
 import 'package:ecommerce/Widgets/AuthWidgets/customTextField.dart';
@@ -53,7 +54,9 @@ class Logincontainer extends StatelessWidget {
                 height: h * .001,
               ),
               CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => const WelcomeSplashScreen());
+                  },
                   title: "Login",
                   color: kPrimary,
                   style: Fonts.splashButtonText),

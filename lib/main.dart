@@ -1,16 +1,13 @@
 import 'package:ecommerce/Core/Constants/colors.dart';
- import 'package:ecommerce/Views/Splash/splash_screen.dart';
- 
+import 'package:ecommerce/Views/Splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-void main() async{
-  
+void main() async {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  
   const MyApp({super.key});
 
   @override
@@ -22,7 +19,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kveryWhite,
         useMaterial3: true,
       ),
-      home:const SplashScreen(),
+      home: const SplashScreen(),
       // getPages: routes,
     );
   }
