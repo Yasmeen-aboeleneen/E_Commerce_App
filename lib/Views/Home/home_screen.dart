@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:ecommerce/Core/Constants/colors.dart';
 import 'package:ecommerce/Views/Cart/cart_screen.dart';
 import 'package:ecommerce/Views/Category/categories_screen.dart';
@@ -19,47 +20,31 @@ class _HomeScreenState extends State<HomeScreen> {
     HomeScreenBody(),
     CategoriesScreen(),
     CartScreen(),
-    SettingsScreen(),
+    SettingsScreen()
   ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kveryWhite,
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        backgroundColor: kveryWhite,
-        elevation: 0,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.dashboard_outlined),
-            label: 'Categories',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: kPrimary,
+        color: kPrimary,
+        buttonBackgroundColor: kPrimary,
+        height: 55.0,
+        items: const <Widget>[
+          Icon(Icons.home, size: 27, color: kveryWhite),
+          Icon(Icons.dashboard_outlined, size: 27, color: kveryWhite),
+          Icon(Icons.shopping_cart, size: 27, color: kveryWhite),
+          Icon(Icons.settings, size: 27, color: kveryWhite),
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: kPrimary,
-        unselectedItemColor:
-            Colors.grey, // Optional: Customize unselected item color
-        onTap: _onItemTapped,
+        index: _selectedIndex,
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
       ),
     );
   }

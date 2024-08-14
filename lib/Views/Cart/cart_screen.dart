@@ -1,3 +1,4 @@
+ import 'package:ecommerce/Core/Constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {
@@ -5,6 +6,8 @@ class CartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return  Container(
+      color: kPrimary,
+    );
   }
 }
